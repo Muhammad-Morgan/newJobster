@@ -1,0 +1,108 @@
+.navbar {
+    /* navbar bg */
+    background-color: #fff;
+    /* logo hover color */
+    --bs-emphasis-color-rgb: #888888;
+    color: var(--bs-emphasis-color-rgb);
+}
+
+.navbar-brand {
+    /* logo color */
+    --bs-navbar-brand-color: #fff;
+    /* logo size */
+    --bs-navbar-brand-font-size: 1.5rem;
+    font-size: var(--bs-navbar-brand-font-size);
+}
+
+.navbar-toggler-icon {
+    /* toggle button color */
+    color: #222;
+}
+
+.nav-link {
+    /* navbar links color */
+    --bs-nav-link-color: #222;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    /* navbar links hover color */
+    --bs-nav-link-hover-color: #b9b9b9;
+}
+
+.dropdown-menu {
+    /* navbar dropdown bg color */
+    --bs-body-bg: #fff;
+    /* navbar dropdown bg hover color */
+    --bs-tertiary-bg: #008cff;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    /* navbar dropdown hover color */
+    --bs-dropdown-link-hover-color: #fff;
+}
+.form-control{
+    /* search bg */
+    --bs-body-bg: #fff;
+}
+.my-togg{
+    background-color: transparent;
+    color: #3B82F6;
+    border: none;
+    font-size: 1.3rem;
+    /* border: solid 1px #525252; */
+    border-radius: 4px;
+    transition: all .3s ease-in-out;
+}
+.my-togg:hover{
+    opacity: .7;
+    color: #222;
+}
+.name-drop{
+    background-color: #83c7ff;
+    font-size: 1.2rem;
+    padding: .2rem 1rem;
+    color: #222;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+}
+.name-drop:hover,
+.name-drop:active{
+    background-color: #46a0eb;
+}
+.name-drop-menu{
+    position: absolute;
+    background-color: #ffb6b6;
+    font-size: 1.2rem;
+    padding: .2rem 1rem;
+    color: #222;
+    width: 160px;
+    top: 2.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    display: none;
+    margin: 0;
+    text-align: center;
+}
+.name-drop-menu:hover{
+    background-color: #b10101;
+    color: #fff;
+}
+@media screen and (min-width: 992px) {
+    .navbar-brand {
+        /* logo size in large screens */
+        --bs-navbar-brand-font-size: 2rem;
+        font-size: var(--bs-navbar-brand-font-size);
+    }
+    .nav-link {
+        /* links size in large screens */
+        --bs-nav-link-font-size: 1.1rem;
+        font-size: var(--bs-nav-link-font-size);
+    }
+    
+}

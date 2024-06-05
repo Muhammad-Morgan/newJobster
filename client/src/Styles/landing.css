@@ -1,0 +1,12 @@
+.landing{
+    background-color: rgb(230, 230, 230);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.landing-center{
+    width: 90%;
+    max-width: 1100px;
+    margin-inline: auto;
+}

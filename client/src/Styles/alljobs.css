@@ -1,0 +1,33 @@
+.alljobs{
+    width: 90%;
+    max-width: 1150px;
+    margin-top: 2rem;
+}
+.filters{
+    background-color: #fff;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.form-control{
+    --bs-body-bg: #e9f2fd;
+    background-color: var(--bs-body-bg);
+    --bs-border-color: #d3d3d3;
+}
+.jobs{
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.beside-sidebar-alljobs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.job-result{
+    background-color: #fff;
+    padding: 1rem 1.5rem;
+}
