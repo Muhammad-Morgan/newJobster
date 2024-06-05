@@ -2,7 +2,7 @@ import axios from 'axios'
 import { jwtDecode } from 'jwt-decode'
 export const userAuth = ({ updateInfo, showAlert, navigate }) => {
     const lToken = localStorage.getItem('lToken')
-    axios.get(`http://localhost:5000/user/auth?token=${lToken}`).then(({ data }) => {
+    axios.get(`https://new-jobster-server.vercel.app/user/auth?token=${lToken}`).then(({ data }) => {
         const { type, msg } = data;
         if (type === 'danger') {
             navigate('/login')
@@ -21,7 +21,7 @@ export const userAuth = ({ updateInfo, showAlert, navigate }) => {
 export const updateUser = ({ setUser, user,lToken}) => {
     const myData = jwtDecode(lToken);
     const {myID} = myData;
-    axios.get(`http://localhost:5000/user/getuser?myID=${myID}`).then(({ data }) => {
+    axios.get(`https://new-jobster-server.vercel.app/user/getuser?myID=${myID}`).then(({ data }) => {
         const { result } = data;
         if (result) {
             setUser({

@@ -27,7 +27,7 @@ const Profile = () => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.put(`http://localhost:5000/user/updateuser?myID=${userDetails.myID}`, {
+        axios.put(`https://new-jobster-server.vercel.app/user/updateuser?myID=${userDetails.myID}`, {
             name: user.name,
             lastname: user.lastname,
             email: user.email,
@@ -38,7 +38,7 @@ const Profile = () => {
             const lToken = localStorage.getItem('lToken')
             updateUser({ user, setUser, lToken });
             const myData = jwtDecode(lToken);
-            axios.post(`http://localhost:5000/user/createtoken?name=${user.name}`, {
+            axios.post(`https://new-jobster-server.vercel.app/user/createtoken?name=${user.name}`, {
                 myID: myData.myID,
                 type: myData.type
             }).then(({ data }) => {

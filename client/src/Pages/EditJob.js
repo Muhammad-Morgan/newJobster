@@ -4,7 +4,7 @@ import Nav from '../Components/Nav/Nav'
 import Side from '../Components/Side/Side'
 import { useGlobalContext } from '../Utilities/Context'
 import { userAuth } from '../Utilities/userAuth'
-import { Link, useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 const EditJob = () => {
@@ -28,7 +28,7 @@ const EditJob = () => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.put(`http://localhost:5000/jobs/editjob?_id=${_id}`, {
+        axios.put(`https://new-jobster-server.vercel.app/jobs/editjob?_id=${_id}`, {
             position: job.position,
             company: job.company,
             location: job.location,

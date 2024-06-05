@@ -28,7 +28,7 @@ const Register = () => {
             myID: new Date().getTime().toString()
         }
         if(user.name && user.email && user.password && user.type){
-            axios.post('http://localhost:5000/user/register', {
+            axios.post('https://new-jobster-server.vercel.app/user/register', {
                 name: tempUser.name,
                 email: tempUser.email,
                 password: tempUser.password,
@@ -51,7 +51,7 @@ const Register = () => {
     }
     useEffect(()=>{
         const lToken = localStorage.getItem('lToken')
-        axios.get(`http://localhost:5000/user/auth?token=${lToken}`).then(({data})=>{
+        axios.get(`https://new-jobster-server.vercel.app/user/auth?token=${lToken}`).then(({data})=>{
             const {type}=data;
             if(type === 'success') return navigate('/dashboard')
         }).catch(err=>console.log(err))

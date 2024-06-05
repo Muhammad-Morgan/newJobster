@@ -20,28 +20,28 @@ const Alljobs = () => {
   })
   const handleChangePosition = (e) => {
     const pos = e.target.value.toLowerCase();
-    axios.get(`http://localhost:5000/jobs/getjobbyposition?posi=${pos}`).then(({ data }) => {
+    axios.get(`https://new-jobster-server.vercel.app/jobs/getjobbyposition?posi=${pos}`).then(({ data }) => {
       const { tempRes } = data;
       setTempJob(tempRes)
     }).catch(err => console.log(err))
     setJob({ ...job, position: e.target.value })
   }
   const handleChangeStatus = (e) => {
-    axios.get(`http://localhost:5000/jobs/getjobbystatus?posi=${e.target.value}`).then(({ data }) => {
+    axios.get(`https://new-jobster-server.vercel.app/jobs/getjobbystatus?posi=${e.target.value}`).then(({ data }) => {
       const { tempRes } = data;
       setTempJob(tempRes)
     }).catch(err => console.log(err))
     setJob({ ...job, status: e.target.value })
   }
   const handleChangeType = (e) => {
-    axios.get(`http://localhost:5000/jobs/getjobbytype?posi=${e.target.value}`).then(({ data }) => {
+    axios.get(`https://new-jobster-server.vercel.app/jobs/getjobbytype?posi=${e.target.value}`).then(({ data }) => {
       const { tempRes } = data;
       setTempJob(tempRes)
     }).catch(err => console.log(err))
     setJob({ ...job, type: e.target.value })
   }
   useEffect(() => {
-    axios.get('http://localhost:5000/jobs/getjob').then(({ data }) => {
+    axios.get('https://new-jobster-server.vercel.app/jobs/getjob').then(({ data }) => {
       const { result } = data;
       setTempJob(result)
     }).catch(err => console.log(err))
@@ -116,7 +116,7 @@ const Alljobs = () => {
                   <div className='col'>
                     <button
                       onClick={() => {
-                        axios.get('http://localhost:5000/jobs/getjob').then(({ data }) => {
+                        axios.get('https://new-jobster-server.vercel.app/jobs/getjob').then(({ data }) => {
                           const { result } = data;
                           console.log(result)
                           setTempJob(result)
@@ -188,7 +188,7 @@ const Alljobs = () => {
                               </Link>
                               <button
                               onClick={()=> {
-                                axios.delete(`http://localhost:5000/jobs/deletejob?job=${item._id}`).then(({data})=>{
+                                axios.delete(`https://new-jobster-server.vercel.app/jobs/deletejob?job=${item._id}`).then(({data})=>{
                                   const {result} = data;
                                    setTempJob(result)
                                     showAlert({

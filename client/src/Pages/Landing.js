@@ -1,5 +1,4 @@
 import React from 'react'
-import { useGlobalContext } from "../Utilities/Context";
 import { Link } from 'react-router-dom';
 import '../Styles/landing.css'
 const Landing = () => {

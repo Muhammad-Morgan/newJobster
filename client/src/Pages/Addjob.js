@@ -36,7 +36,7 @@ const Addjob = () => {
             
                 return `${day}/${month}/${year}`;
               };
-            axios.post('http://localhost:5000/jobs/addjob', {
+            axios.post('https://new-jobster-server.vercel.app/jobs/addjob', {
                 position: job.position,
                 company: job.company,
                 location: job.location,

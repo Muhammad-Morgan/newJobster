@@ -18,7 +18,7 @@ const Dashboard = () => {
     declined: 0
   })
   useEffect(() => {
-    axios.get('http://localhost:5000/jobs/getnumber').then(({data})=>{
+    axios.get('https://new-jobster-server.vercel.app/jobs/getnumber').then(({data})=>{
       const {tempNum} = data;
       setNum({
         ...num,

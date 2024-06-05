@@ -20,7 +20,7 @@ const Login = () => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:5000/user/login', {
+        axios.post('https://new-jobster-server.vercel.app/user/login', {
             email: user.email,
             password: user.password
         }).then(({ data }) => {
@@ -36,7 +36,7 @@ const Login = () => {
     }
     useEffect(() => {
         const lToken = localStorage.getItem('lToken')
-        axios.get(`http://localhost:5000/user/auth?token=${lToken}`).then(({ data }) => {
+        axios.get(`https://new-jobster-server.vercel.app/user/auth?token=${lToken}`).then(({ data }) => {
             const { type } = data;
             if (type === 'success') return navigate('/dashboard')
         }).catch(err => console.log(err))

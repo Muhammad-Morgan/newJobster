@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { useGlobalContext } from "./Utilities/Context";
 import Landing from "./Pages/Landing";
 import Error from "./Pages/Error";
 import Login from "./Pages/Login";
